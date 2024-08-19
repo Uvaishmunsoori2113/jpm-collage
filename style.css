@@ -1,0 +1,523 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(128, 128, 128, 0.719)
+}
+
+/* html { */
+/* scroll-behavior: smooth; */
+
+
+.top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+/*..................... This is logo....................... */
+.logo {
+    margin-left: 41px;
+    margin-top: 10px;
+
+
+
+}
+
+.logo img {
+    width: 105px;
+
+
+}
+
+/*....................... This is header name ...................... */
+.heading {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.heading h1 {
+    font-size: 40px;
+    font-weight: normal;
+    color: #4970B7 !important;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+    font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+
+}
+
+.heading span {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #56728F !important;
+}
+
+/* ....................This is input text area..........................*/
+.search-box {
+    position: relative;
+    margin-left: 59px;
+}
+
+.search-box input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-right: none;
+    border: 2px solid red;
+    cursor: pointer;
+}
+
+.search-box .icon {
+    position: absolute;
+    left: 10px;
+    top: 32%;
+
+}
+
+/* ................This is button................... */
+.btn {
+    margin-left: 0px;
+    /* box-sizing: border-box; */
+    transition: 1s ease-in-out;
+    cursor: pointer;
+    padding: 8px;
+    border: 2px solid #0004ff;
+    border-left: none;
+    background: rgb(255, 0, 140);
+    color: azure;
+    font-size: 15px;
+    /* font: bold; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn:hover {
+    color: black;
+}
+
+/*......................... This is navgation list.............................. */
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
+
+
+}
+
+.gif {
+    width: 25px;
+    cursor: pointer;
+    display: none;
+    margin-left: 90%;
+}
+
+.navbar ul li {
+    padding: 5px 20px;
+    position: relative;
+
+
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+
+
+}
+
+.navbar ul li a:hover {
+    text-decoration: 1px solid blue underline;
+}
+
+/* .........................drow down hover using visible propertis....................... */
+/* .navbar ul li ul { */
+/* position: absolute; */
+/* top: 100%; */
+/* width: 186%; */
+/* left: -69px; */
+/* background: red; */
+/* visibility: hidden; */
+/* } */
+/* .navbar ul li ul li{ */
+/* padding: 15px; */
+/* } */
+/* .navbar ul li:hover ul { */
+/* visibility: visible; */
+/* opacity: 1; */
+/* } */
+
+/* drow down hover using display block propertis */
+.navbar ul li ul {
+    position: absolute;
+    top: 100%;
+    left: -38%;
+    padding: 10px;
+    display: none;
+    cursor: pointer;
+    background-color: black;
+    opacity: .8;
+    z-index: 1;
+
+
+}
+
+.navbar ul li ul li {
+    display: block;
+    /* padding-left: 10px; */
+    text-align: center;
+}
+
+.navbar ul li:hover ul {
+    display: block;
+    text-decoration: none;
+
+
+}
+
+.navbar ul li ul a {
+    color: #fff;
+
+
+}
+
+.fa-solid {
+    float: right;
+    padding-top: 2px;
+    margin-left: 4px;
+}
+
+/* ................nested drowdown............... */
+.drow {
+    display: none;
+}
+
+
+.navbar ul li:hover .drow {
+    display: block;
+    padding-left: 10px;
+    position: absolute;
+    top: 0;
+    left: 105%;
+    background-color: black;
+    /* color: #fff; */
+}
+
+.drow ul li a {
+    background-color: #fff;
+}
+
+/* ...........photo drow down......... */
+
+.navbar ul li .photo {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 30px;
+    background-color: red;
+    color: #fff;
+
+}
+
+.navbar ul li .photo li {
+    display: block;
+
+}
+
+.navbar ul li:hover .photo {
+    display: block;
+    /* background-color: red; */
+    /* color: #fff; */
+}
+
+/* ...........contact drow down......... */
+
+.navbar ul li .contact {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 10px;
+    background-color: red;
+}
+
+.navbar ul li .contact li {
+    display: block;
+
+}
+
+.navbar ul li:hover .contact {
+    display: block;
+    background-color: red;
+    color: #fff;
+}
+
+/* ..............image slider ...............*/
+
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 1218px;
+    margin: 2px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/*..................... image slider end .............*/
+/* ..........main method of body .............*/
+
+.box {
+    width: 74%;
+    border: 1px solid red;
+    margin-top: 10px;
+    margin-bottom: 28px;
+    margin-left: 11%;
+    padding: 0px 50px;
+    border-radius: 30px;
+    background-color: floralwhite;
+    padding-bottom: 50px;
+
+}
+
+.box h1 {
+    font-size: 50px;
+    text-align: center;
+    margin: 5px;
+    color: red;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.box p {
+    letter-spacing: 0.5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+
+}
+
+.box span {
+    display: block;
+    color: green;
+    font-size: 32px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial;
+}
+
+/* ...........main method end........... */
+/* .....This is footer.... */
+.footer {
+    width: 100%;
+    border: 1px solid red;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    padding-bottom: 5px;
+    background-color: blue;
+}
+
+.footer h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer p {
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+}
+
+/* ........Footer..... */
+
+@media only screen and (max-width:700px) {
+
+
+    /* ...........logo...................  */
+    .top logo {
+        margin-right: 43px;
+    }
+
+    .top img {
+        width: 50px;
+    }
+
+    /* ..........header heading......... */
+    .heading {
+        margin-top: -2px;
+
+    }
+
+    .heading h1 {
+        font-size: 15px;
+    }
+
+    .heading span {
+        font-size: 10px;
+
+    }
+
+    /* ...........searchbar........... */
+    .search-box {
+        margin-top: 2px;
+        margin-left: 5px;
+    }
+
+    .btn {
+        margin-top: 2px;
+    }
+
+    /* ......nav bar creation....... */
+    .navbar ul {
+        width: 100%;
+        height: 76px;
+        background: linear-gradient(#52fb8c, #60ff63);
+        position: absolute;
+        top: 144px;
+        right: 0;
+        z-index: 2;
+    }
+
+    .navbar ul li ul {
+        position: absolute;
+        top: 103%;
+        left: -14%;
+        padding: 10px;
+        display: none;
+        cursor: pointer;
+        background-color: black;
+        opacity: .8;
+        z-index: 1;
+        height: 227px;
+    }
+
+    .navbar ul li .photo {
+        width: 101px;
+        height: 30px;
+        position: absolute;
+        display: none;
+        top: 95%;
+        left: 41px;
+        background-color: rgb(89, 255, 0);
+        color: #fff;
+    }
+
+    .navbar ul li {
+        padding: 1px 12px;
+    }
+
+
+    /* ............icon.......... */
+    .gif {
+        display: block;
+    }
+
+    /* main content slider img */
+    .slider {
+        position: relative;
+        width: 80%;
+        max-width: 1218px;
+        margin: 2px auto;
+        margin-top: 2px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin-top: 105px;
+        height: 181px;
+    }
+
+    /* photo gallery */
+    h2 {
+        color: red;
+        margin-bottom: 10px;
+        margin-left: 34px;
+        font-size: 25px;
+        font-family: 'Times New Roman', Times;
+        margin-top: 112px;
+    }
+
+    .gallery {
+        margin: auto;
+        width: 50%;
+    }
+
+    /* main content of website pages */
+    .box {
+        width: 72%;
+        margin-left: 13%;
+        margin-top: 5px;
+        padding: 2px 7px;
+        border-radius: 5px;
+    }
+
+    .box h1 {
+        font-size: 25px;
+        margin-top: 4px;
+    }
+
+    .box span {
+        font-size: 15px;
+    }
+
+    .box p {
+        font-size: 10px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .footer h2 {
+        font-size: 18px;
+        margin-top: 1px;
+        margin-bottom: 10px;
+    }
+
+    .footer p {
+        font-size: 10px;
+    }
+}
