@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<style>
+    .form-container {
+        background-color: #fff;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin: 10px 0 5px;
+    }
+
+    input,
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    #message {
+        margin-top: 20px;
+        color: green;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <div class="top">
+        <div class="logo">
+            <img src="img/logo.png" alt="logo">
+        </div>
+        <div class="heading">
+            <h1>Jamuna Parasad Memoriyal Pg Collage <span>Bhairpura-Khajuria, Nainital Road, Bareilly</span></h1>
+        </div>
+        <div class="search-box">
+            <i class="fas fa-search icon"></i>
+            <input type="text" placeholder="Search...">
+        </div>
+        <button1 class="btn" style="  margin-top: -8px;">Click me</button>
+    </div>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="photo.html">EXPLORE JPMC <i class="fa-solid fa-chevron-down"></i></a>
+                <ul class="">
+                    <li><a href="#">ABOUT JPMC</a></li>
+                    <li><a href="#">OUR INSPIRATION</a></l>
+                    <li><a href="#">VISION/MISSION</a></li>
+                    <li><a href="#">MESSAGES <i class="fa-solid fa-chevron-right"></i></a>
+                        <ul class="drow">
+                            <li><a href="md.html">MENEGING DIRECTOR</a></li>
+                            <li><a href="massage.html">DIRECTOR</a></li>
+                            <li><a href="cr.html">CHAIRMEN MASSAGE</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">BOARD OF GOVERNORS</a></li>
+                    <li><a href="#">ADVISORY BOARD</a></li>
+                    <li><a href="#">APPROVALS AND AFILIATIONS</a></li>
+                </ul>
+            </li>
+            <li><a href="#">LIFE @ JPMC</a></li>
+            <li><a href="#">ACADEMICS @ JPMC</a></li>
+            <li><a href="#">JOIN JPMC</a>
+            </li>
+            <li><a href="#">PHOTO GALLERY</a>
+                <ul class="photo">
+                    <li><a href="photo.html">PHOTO</a></li>
+                </ul>
+            </li>
+            <li><a href="#">CONTACT US</a>
+                <ul class="contact">
+                    <li><a href="form.html">Addmission form</a></li>
+                    <li><a href="#">Addmission details</a></li>
+                </ul>
+            </li>
+        </ul>
+        <img src="menu icon.png" class="gif" onclick="togglemenu()">
+    </div>
+    <hr>
+    <div class="form-container">
+        <h1>Admission Form</h1>
+        <form id="admissionForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+                <option value="">Select a course</option>
+                <option value="bsc">B.C.A</option>
+                <option value="ba">B.A</option>
+                <option value="bcom">B.Com</option>
+                <option value="btech">B.Tech</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div id="message"></div>
+    </div>
+    <!-- ...............................footer ............................-->
+    <div class="footer">
+        <h2>| Site Map | Terms of Use | </h2>
+        <p>Web site best viewed at 1024x768 resolution. For best results please use latest versions of Mozilla Firefox,
+            Google Chrome, or Microsoft Internet Explorer.
+            Copyright © Jamuna Prasad Memorial College, 2024.<bold>Designed and hosted by Er. Mr.Uvaish Mansoori and
+                Dept. of B.C.A computer science..</bold>
+        </p>
+    </div>
+    <!--......................................... footer end.............. -->
+    <script>
+        document.getElementById('admissionForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let phone = document.getElementById('phone').value;
+            let dob = document.getElementById('dob').value;
+            let course = document.getElementById('course').value;
+
+            // Simple form validation
+            if (name === '' || email === '' || phone === '' || dob === '' || course === '') {
+                alert('Please fill all the fields');
+                return;
+            }
+
+            // Display success message
+            document.getElementById('message').textContent = 'Form submitted successfully!';
+
+            // Optionally, clear the form fields
+            document.getElementById('admissionForm').reset();
+        });
+
+    </script>
+</body>
+<script src="js/js.index"></script>
+
+</html>
